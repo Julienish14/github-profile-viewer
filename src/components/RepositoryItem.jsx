@@ -1,77 +1,42 @@
-import { useState } from "react";
-import { FiStar, FiGitBranch, FiFilter } from "react-icons/fi";
-import RepositoryItem from "./RepositoryItem";
+import { FiStar, FiGitBranch } from "react-icons/fi";
 
-const Repositories = ({ repos }) => {
-  const [sortBy, setSortBy] = useState("stars");
-  const [languageFilter, setLanguageFilter] = useState("all");
-
-  if (!repos || repos.length === 0) return null;
-
-  // Get unique languages
-  const languages = [
-    "all",
-    ...new Set(repos.map((repo) => repo.language).filter(Boolean)),
-  ];
-
-  // Sort and filter repos
-  const sortedRepos = [...repos]
-    .sort((a, b) => {
-      if (sortBy === "stars") return b.stargazers_count - a.stargazers_count;
-      if (sortBy === "name") return a.name.localeCompare(b.name);
-      if (sortBy === "updated")
-        return new Date(b.updated_at) - new Date(a.updated_at);
-      return 0;
-    })
-    .filter(
-      (repo) => languageFilter === "all" || repo.language === languageFilter
-    )
-    .slice(0, 10);
-
+const RepositoryItem = ({ repo }) => {
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
-      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 gap-4">
-        <h2 className="text-xl font-bold dark:text-white">Repositories</h2>
-        <div className="flex flex-wrap gap-3">
-          <div className="flex items-center">
-            <FiFilter className="mr-2 text-gray-500" />
-            <select
-              value={languageFilter}
-              onChange={(e) => setLanguageFilter(e.target.value)}
-              className="px-3 py-1 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+    <div className="border rounded-lg p-4 hover:shadow-md transition-shadow dark:border-gray-700">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+        <div>
+          <h3 className="font-semibold dark:text-white">
+            <a
+              href={repo.html_url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-blue-600 dark:hover:text-blue-400"
             >
-              {languages.map((lang) => (
-                <option key={lang} value={lang}>
-                  {lang}
-                </option>
-              ))}
-            </select>
-          </div>
-          <select
-            value={sortBy}
-            onChange={(e) => setSortBy(e.target.value)}
-            className="px-3 py-1 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
-          >
-            <option value="stars">Sort by stars</option>
-            <option value="name">Sort by name</option>
-            <option value="updated">Sort by updated</option>
-          </select>
+              {repo.name}
+            </a>
+          </h3>
+          {repo.description && (
+            <p className="text-gray-600 dark:text-gray-400 mt-1">
+              {repo.description}
+            </p>
+          )}
         </div>
-      </div>
-
-      <div className="space-y-4">
-        {sortedRepos.length > 0 ? (
-          sortedRepos.map((repo) => (
-            <RepositoryItem key={repo.id} repo={repo} />
-          ))
-        ) : (
-          <p className="text-gray-500 dark:text-gray-400">
-            No repositories found with the selected language.
-          </p>
-        )}
+        <div className="flex flex-wrap gap-3 text-sm">
+          {repo.language && (
+            <span className="px-2 py-1 bg-gray-100 rounded-full dark:bg-gray-700 dark:text-gray-300">
+              {repo.language}
+            </span>
+          )}
+          <span className="flex items-center text-gray-600 dark:text-gray-400">
+            <FiStar className="mr-1" /> {repo.stargazers_count}
+          </span>
+          <span className="flex items-center text-gray-600 dark:text-gray-400">
+            <FiGitBranch className="mr-1" /> {repo.forks_count}
+          </span>
+        </div>
       </div>
     </div>
   );
 };
 
-export default Repositories;
+export default RepositoryItem;
