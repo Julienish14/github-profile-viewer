@@ -17,7 +17,6 @@ const App = () => {
 
   const handleSearch = (newUsername) => {
     setUsername(newUsername);
-    // Update search history
     setSearchHistory((prev) => {
       const newHistory = [
         newUsername,
