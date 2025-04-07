@@ -25,7 +25,11 @@ const ThemeToggle = () => {
       className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700"
       aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
     >
-      {darkMode ? <FiSun size={20} /> : <FiMoon size={20} />}
+      {darkMode ? (
+        <FiSun style={{ color: "white" }} size={20} />
+      ) : (
+        <FiMoon size={20} />
+      )}
     </button>
   );
 };

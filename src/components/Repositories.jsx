@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FiStar, FiGitBranch, FiFilter } from "react-icons/fi";
+import { FiFilter } from "react-icons/fi";
 import RepositoryItem from "./RepositoryItem";
 
 const Repositories = ({ repos }) => {
@@ -8,13 +8,11 @@ const Repositories = ({ repos }) => {
 
   if (!repos || repos.length === 0) return null;
 
-  // Get unique languages
   const languages = [
     "all",
     ...new Set(repos.map((repo) => repo.language).filter(Boolean)),
   ];
 
-  // Sort and filter repos
   const sortedRepos = [...repos]
     .sort((a, b) => {
       if (sortBy === "stars") return b.stargazers_count - a.stargazers_count;

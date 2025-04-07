@@ -1,4 +1,4 @@
-import { FiGithub, FiUsers, FiMapPin, FiUser } from "react-icons/fi";
+import { FiGithub, FiUsers, FiMapPin } from "react-icons/fi";
 
 const UserProfile = ({ user }) => {
   if (!user) return null;
@@ -9,7 +9,7 @@ const UserProfile = ({ user }) => {
         <img
           src={user.avatar_url}
           alt={`${user.login}'s avatar`}
-          className="w-32 h-32 rounded-full border-4 border-blue-500"
+          className="w-32 h-32 rounded-full border-4 border-gray-200"
         />
         <div className="flex-1">
           <div className="flex items-center gap-4 mb-2">

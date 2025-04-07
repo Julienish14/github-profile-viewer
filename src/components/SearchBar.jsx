@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { FiSearch } from "react-icons/fi";
 
 const SearchBar = ({ onSearch, searchHistory, onHistorySelect }) => {
   const [username, setUsername] = useState("");
@@ -31,7 +30,6 @@ const SearchBar = ({ onSearch, searchHistory, onHistorySelect }) => {
           type="submit"
           className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
         >
-          <FiSearch className="inline mr-1" />
           Search
         </button>
       </form>
