@@ -42,13 +42,13 @@ You can see the application in action here:
   - **API:** GitHub API
   - **Deployment:** GitHub
 
-## Installation (For Developers - Optional if it's purely an internal tool but good practice)
+## Installation - For Developers
 
 If you want to run this application locally or contribute to its development, follow these steps:
 
 1.  **Clone the repository:**
     ```bash
-    git clone (git@github.com:Julienish14/github-profile-viewer.git)
+    git clone git@github.com:Julienish14/github-profile-viewer.git
     ```
 2.  **Navigate to the project directory:**
     ```bash
