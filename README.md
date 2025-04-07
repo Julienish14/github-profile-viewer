@@ -15,8 +15,11 @@ The **GitHub Profile Viewer Application** is a simple yet effective internal too
   - Name and public profile bio.
   - Number of public repositories.
   - Number of followers and following.
-  - Account creation date.
-- **Repository Listing:** Get a quick glimpse of the developer's public repositories. (You can expand on this if you display more repository details like last updated, language, etc.)
+  - Location.
+- **Repository Listing:** Get a quick glimpse of the developer's public repositories.
+  - Languages
+  - Sort by stars
+  - Latest 10 repositories.
 - **Deployed and Accessible:** The application is readily accessible via the provided deployment link, making it easy for the HR team to use without complex setup.
 
 ## Live Demo
@@ -34,7 +37,7 @@ You can see the application in action here:
 
 ## Technology Stack
 
-- _(List the main technologies used in your project. Examples below, adjust as needed)_
+- _Used Technologies_
   - **Frontend:** React JS
   - **API:** GitHub API
   - **Deployment:** GitHub
@@ -45,16 +48,16 @@ If you want to run this application locally or contribute to its development, fo
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPOSITORY_NAME.git](https://www.google.com/search?q=https://github.com/julienish14/github-profile-viewer.git)
+    git clone (git@github.com:Julienish14/github-profile-viewer.git)
     ```
 2.  **Navigate to the project directory:**
     ```bash
-    cd YOUR_REPOSITORY_NAME
+    cd git-profile-viewer
     ```
 3.  **Install dependencies:**
-
+    ```bash
     npm install
-
+    ```
 4.  **Run the application:**
 
     ```bash
@@ -67,7 +70,7 @@ If you want to run this application locally or contribute to its development, fo
 
 If you have any questions or feedback, please feel free to reach out:
 
-- [julienishimwe14@gmail.com]
-- [https://www.linkedin.com/in/julien-ishimwe-34a0b118a/]
+- [My Email](julienishimwe14@gmail.com)
+- [My LinkedIn](https://www.linkedin.com/in/julien-ishimwe-34a0b118a/)
 
 ---
