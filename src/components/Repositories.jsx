@@ -12,7 +12,7 @@ const Repositories = ({ repos }) => {
     "all",
     ...new Set(repos.map((repo) => repo.language).filter(Boolean)),
   ];
-  const languages = [
+  const language = [
     "all",
     ...new Set(repos.map((repo) => repo.language).filter(Boolean)),
   ];
