@@ -12,6 +12,10 @@ const Repositories = ({ repos }) => {
     "all",
     ...new Set(repos.map((repo) => repo.language).filter(Boolean)),
   ];
+  const languages = [
+    "all",
+    ...new Set(repos.map((repo) => repo.language).filter(Boolean)),
+  ];
 
   const sortedRepos = [...repos]
     .sort((a, b) => {
