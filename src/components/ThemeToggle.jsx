@@ -26,7 +26,7 @@ const ThemeToggle = () => {
       aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
     >
       {darkMode ? (
-        <FiSun style={{ color: "white" }} size={20} />
+        <FiSun style={{ color: "red" }} size={20} />
       ) : (
         <FiMoon size={20} />
       )}
