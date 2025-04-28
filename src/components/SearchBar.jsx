@@ -9,12 +9,7 @@ const SearchBar = ({ onSearch, searchHistory, onHistorySelect }) => {
       onSearch(username);
     }
   };
-  const handleSubmt = (e) => {
-    e.preventDefault();
-    if (username.trim()) {
-      onSearch(username);
-    }
-  };
+
   return (
     <div className="mb-6">
       <form onSubmit={handleSubmit} className="flex gap-2">
