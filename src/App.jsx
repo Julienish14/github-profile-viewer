@@ -56,7 +56,7 @@ const App = () => {
         )}
 
         {loading ? (
-          <LoadingSpinner />
+          <ReLoadingSpinner />
         ) : (
           <>
             <UserProfile user={user} />
