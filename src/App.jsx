@@ -4,8 +4,9 @@ import { useLocalStorage } from "./hooks/useLocalStorage";
 import SearchBar from "./components/SearchBar";
 import UserProfile from "./components/UserProfile";
 import Repositories from "./components/Repositories";
-import LoadingSpinner from "./components/LoadingSpinner";
+// import LoadingSpinner from "./components/LoadingSpinner";
 import ThemeToggle from "./components/ThemeToggle";
+import ReloadingSpinnner from "./components/ReloadingSpinner";
 
 const App = () => {
   const [username, setUsername] = useState("");
@@ -55,7 +56,7 @@ const App = () => {
         )}
 
         {loading ? (
-          <LoadingSpinner />
+          <ReloadingSpinnner />
         ) : (
           <>
             <UserProfile user={user} />
