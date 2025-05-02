@@ -37,7 +37,7 @@ const LoadingSpinner = () => {
       {letters.map((letter, i) => (
         <span
           key={i}
-          className="text-green-400 font-bold animate-bounce"
+          className="text-gray-600 font-bold animate-bounce"
           style={{
             animationDelay: `${i * 0.1}s`,
             animationDuration: "1s",
