@@ -32,26 +32,26 @@
 //Cooler and cooler one loading spinner With LOADING LETTERS...
 
 // const LoadingSpinner = () => {
-//   const letters = ["L", "O", "A", "D", "I", "N", "G"];
+  const letters = ["L", "O", "A", "D", "I", "N", "G"];
 
-//   return (
-//     <div className="flex justify-center items-center py-12 space-x-1">
-//       {letters.map((letter, i) => (
-//         <span
-//           key={i}
-//           className="text-gray-600 font-bold animate-bounce"
-//           style={{
-//             animationDelay: `${i * 0.1}s`,
-//             animationDuration: "1s",
-//           }}
-//         >
-//           {letter}
-//         </span>
-//       ))}
-//     </div>
-//   );
-// };
-// export default LoadingSpinner;
+  return (
+    <div className="flex justify-center items-center py-12 space-x-1">
+      {letters.map((letter, i) => (
+        <span
+          key={i}
+          className="text-gray-600 font-bold animate-bounce"
+          style={{
+            animationDelay: `${i * 0.1}s`,
+            animationDuration: "1s",
+          }}
+        >
+          {letter}
+        </span>
+      ))}
+    </div>
+  );
+};
+export default LoadingSpinner;
 
 // Dot Dot Dots loading spinner...
 // const LoadingSpinner = () => {
