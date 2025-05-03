@@ -31,7 +31,7 @@
 
 //Cooler and cooler one loading spinner With LOADING LETTERS...
 
-// const LoadingSpinner = () => {
+const LoadingSpinner = () => {
   const letters = ["L", "O", "A", "D", "I", "N", "G"];
 
   return (
