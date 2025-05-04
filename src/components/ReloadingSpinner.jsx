@@ -54,21 +54,21 @@
 // export default LoadingSpinner;
 
 // Dot Dot Dots loading spinner...
-const LoadingSpinner = () => {
-  return (
-    <div className="flex justify-center items-center py-12 space-x-2">
-      {[0, 1, 2].map((i) => (
-        <div
-          key={i}
-          className="w-3 h-3 bg-green-400 rounded-full animate-bounce"
-          style={{ animationDelay: `${i * 0.1}s` }}
-        />
-      ))}
-    </div>
-  );
-};
+// const LoadingSpinner = () => {
+//   return (
+//     <div className="flex justify-center items-center py-12 space-x-2">
+//       {[0, 1, 2].map((i) => (
+//         <div
+//           key={i}
+//           className="w-3 h-3 bg-green-400 rounded-full animate-bounce"
+//           style={{ animationDelay: `${i * 0.1}s` }}
+//         />
+//       ))}
+//     </div>
+//   );
+// };
 
-export default LoadingSpinner;
+// export default LoadingSpinner;
 
 const LoadingSpinner = () => {
   const particles = 12;
