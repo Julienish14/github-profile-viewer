@@ -70,6 +70,7 @@
 
 // export default LoadingSpinner;
 
+//Loading Spinner with more particles and a different animation
 const LoadingSpinner = () => {
   const particles = 12;
 
