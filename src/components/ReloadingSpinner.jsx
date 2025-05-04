@@ -69,3 +69,44 @@
 // };
 
 // export default LoadingSpinner;
+
+const LoadingSpinner = () => {
+  const particles = 12;
+
+  return (
+    <div className="flex justify-center items-center py-12">
+      <div className="relative w-12 h-12">
+        {[...Array(particles)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute w-2 h-2 bg-green-400 rounded-full"
+            style={{
+              left: "50%",
+              top: "50%",
+              transform: "translate(-50%, -50%)",
+              animation: "particle-spin 1.2s linear infinite",
+              animationDelay: `${i * (1.2 / particles)}s`,
+              opacity: 0,
+            }}
+          />
+        ))}
+      </div>
+      <style jsx>{`
+        @keyframes particle-spin {
+          0% {
+            opacity: 1;
+            transform: translate(-50%, -50%) rotate(0deg) translateX(20px)
+              rotate(0deg);
+          }
+          100% {
+            opacity: 0;
+            transform: translate(-50%, -50%) rotate(360deg) translateX(20px)
+              rotate(-360deg);
+          }
+        }
+      `}</style>
+    </div>
+  );
+};
+
+export default LoadingSpinner;
