@@ -10,24 +10,24 @@
 
 //Loading spinner Creative One
 
-const LoadingSpinner = () => {
-  return (
-    <div className="flex justify-center items-center py-12">
-      <div className="relative w-12 h-12">
-        <div className="absolute inset-0 border-2 border-blue-900 rounded-full animate-ping opacity-75"></div>
-        <div
-          className="absolute inset-0 border-2 border-blue-900 rounded-full animate-ping opacity-75"
-          style={{ animationDelay: "0.3s" }}
-        ></div>
-        <div
-          className="absolute inset-0 border-2 border-blue-900 rounded-full animate-ping opacity-75"
-          style={{ animationDelay: "0.6s" }}
-        ></div>
-      </div>
-    </div>
-  );
-};
-export default LoadingSpinner;
+// const LoadingSpinner = () => {
+//   return (
+//     <div className="flex justify-center items-center py-12">
+//       <div className="relative w-12 h-12">
+//         <div className="absolute inset-0 border-2 border-blue-900 rounded-full animate-ping opacity-75"></div>
+//         <div
+//           className="absolute inset-0 border-2 border-blue-900 rounded-full animate-ping opacity-75"
+//           style={{ animationDelay: "0.3s" }}
+//         ></div>
+//         <div
+//           className="absolute inset-0 border-2 border-blue-900 rounded-full animate-ping opacity-75"
+//           style={{ animationDelay: "0.6s" }}
+//         ></div>
+//       </div>
+//     </div>
+//   );
+// };
+// export default LoadingSpinner;
 
 //Cooler and cooler one loading spinner With LOADING LETTERS...
 
