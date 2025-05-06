@@ -64,7 +64,7 @@ If you want to run this application locally or contribute to its development, fo
     npm start
     ```
 
-5.  Open your browser and navigate to the address where the application is running (`http://localhost:3000`).
+<!-- 5.  Open your browser and navigate to the address where the application is running (`http://localhost:3000`). -->
 
 ## Contact
 
